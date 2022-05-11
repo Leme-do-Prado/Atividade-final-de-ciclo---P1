@@ -1,4 +1,5 @@
 #include <iostream>
+
 #include <string.h>
 
 using namespace std;
@@ -13,6 +14,10 @@ class Contato
 		string nome;
 
 		int idade;
+		
+		string email;
+		
+		string telefone;
 
 
     public:
@@ -24,6 +29,10 @@ class Contato
 			this->nome = nome;
 
 			this->idade = idade;
+			
+			this->email = email;
+			
+			this->telefone = telefone;
 
 		}
 
@@ -42,6 +51,22 @@ class Contato
 			this->idade = idade;
 
 		}
+		
+		void setEmail(string email)
+		
+		{
+			
+			this->email = email;
+			
+		}
+		
+		void setTelefone(string telefone)
+		
+		{
+			
+			this->telefone = telefone;
+			
+		}
 
 		string getNome()
 
@@ -58,6 +83,22 @@ class Contato
 			return this->idade;
 
 		}
+		
+		string getEmail()
+		
+		{
+			
+			return this->email;
+			
+		}
+		
+		string getTelefone
+		
+		{
+			
+			return this->telefone;
+			
+		}
 
 		
 
@@ -68,6 +109,10 @@ class Contato
 			return this->nome;
 
 			return to_string(this->idade);
+			
+			return this->email;
+			
+			return this->telefone;
 
 		}
 
@@ -84,9 +129,6 @@ int main(int argc, char** argv)
 
 	int maioridade = 0;
 
-	Contato* maisvelho;
-
-	
 
 	Contato *contatos[10]
 
@@ -99,6 +141,10 @@ int main(int argc, char** argv)
 			cin >> contatos[i] -> setNome;
 
 			cin >> contatos[i] -> setIdade;
+			
+			cin >> contatos[i] -> setEmail;
+			
+			cin >> contatos[i] -> setTelefone;
 
 		}
 
@@ -128,9 +174,9 @@ int main(int argc, char** argv)
 
 			maioridade = contatos[i] -> idade;
 
-	cout << "Média: " << idademedia;	}
+	}
 
-cout << "Média: " << idademedia;		}
+}
 
 		
 
@@ -138,7 +184,7 @@ cout << "Média: " << idademedia;		}
 
 		
 
-cout << "Média: " << idademedia;		cout << "Média: " << idademedia;
+		cout << "Média: " << idademedia;
 
 		cout << "Maiores de idade são: " << qtmaiores;
 
@@ -169,5 +215,4 @@ cout << "Média: " << idademedia;		cout << "Média: " << idademedia;
 		}
 
 }
-
 
